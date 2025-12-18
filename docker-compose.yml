@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  ros2:
+    build: .
+    image: ros2-humble:22.04
+    container_name: ros2_humble
+    ports:
+      - "5901:5900"
+    environment:
+      - ROS2_WS=/workspaces/ros2_ws
+    volumes:
+      - ./src:/workspaces/ros2_ws/src
+      - ./scripts:/workspaces/ros2_ws/scripts
+      - ros2_build:/workspaces/ros2_ws/build
+      - ros2_install:/workspaces/ros2_ws/install
+      - ros2_log:/workspaces/ros2_ws/log
+    tty: true
+    stdin_open: true
+
+volumes:
+  ros2_build:
+  ros2_install:
+  ros2_log:

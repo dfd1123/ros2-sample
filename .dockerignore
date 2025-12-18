@@ -1,0 +1,12 @@
+build
+install
+log
+
+src/**/__pycache__/
+src/**/.pytest_cache/
+src/**/.mypy_cache/
+
+.git
+.gitignore
+
+.DS_Store
