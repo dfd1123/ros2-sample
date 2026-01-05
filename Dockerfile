@@ -34,6 +34,7 @@ RUN apt update && apt install -y \
     python3-setuptools \
     python3-vcstool \
     wget \
+    tree \
     python3-argcomplete \
     python3-rosdep
 
